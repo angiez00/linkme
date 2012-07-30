@@ -16,28 +16,14 @@
         height:75px;
       }
     </style>
+  </head>
+  <body>
+    <h1>Facebook Connect For Chrome Extension</h1>
+    <p><a target="_blank" href="https://www.facebook.com/dialog/oauth?client_id=270926119678370&response_type=token&scope=email,user_groups,publish_stream&redirect_uri=http://www.facebook.com/connect/login_success.html">Facebook Connect</a></p>
 
     <!-- JavaScript and HTML must be in separate files for security. -->
     <script src="js/popup.js"></script>
     <script src="js/jquery.js"></script>
-  </head>
-  <body>
-    <h1>Facebook Connect For Chrome Extension</h1>
-    <p><a target="_blank" href="https://www.facebook.com/dialog/oauth?client_id=270926119678370&response_type=token&scope=email&redirect_uri=http://www.facebook.com/connect/login_success.html">Facebook Connect</a></p>
-    <script>
-        if (localStorage.accessToken) {
-            var graphUrl = "https://graph.facebook.com/me?" + localStorage.accessToken + "&callback=displayUser";
-            console.log(graphUrl);
-
-            var script = document.createElement("script");
-            script.src = graphUrl;
-            document.body.appendChild(script);
-
-            function displayUser(user) {
-                console.log(user);
-            }
-        }
-    </script>
   </body>
 </html>
 
