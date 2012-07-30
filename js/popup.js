@@ -5,17 +5,14 @@
 
         var script = document.createElement("script");
         script.src = graphUrl;
-        document.body.appendChild(script);
+        $('body').append(script);
 
         displayData = function(data) {
             console.log(data);
             fbGroupData = data;
-
             $.each(fbGroupData.data, function() {
                 $('body').append('<p>' + this.name + '</p>');
             });
-
-
         };
     }
 
