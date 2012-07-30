@@ -1,7 +1,7 @@
 {
   "name": "My First Extension",
   "version": "1.0",
-  "manifest_version": 2,
+  "manifest_version": 1,
   "description": "The first extension that I made.",
   "background_page": "background.html",
   "browser_action": {
@@ -10,6 +10,6 @@
   },
   "permissions": [
     "tabs",
-    "*.facebook.com/*"
+    "*://*.facebook.com/"
   ]
 }
