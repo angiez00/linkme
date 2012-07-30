@@ -10,9 +10,13 @@
         displayData = function(data) {
             console.log(data);
             fbGroupData = data;
-            $.each(fbGroupData.data, function() {
-                $('body').append('<p>' + this.name + '</p>');
-            });
+            if (fbGroupData.data) {
+                $.each(fbGroupData.data, function() {
+                    $('body').append('<p>' + this.name + '</p>');
+                });
+            } else {
+                $('body').append('<p> Something went wrong with facebook. </p>');
+            }
         };
     }
 
