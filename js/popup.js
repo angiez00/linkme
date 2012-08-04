@@ -15,7 +15,7 @@
                     $('body').append('<p>' + this.name + '</p>');
                 });
             } else {
-                $('body').append('<p> Something went wrong with facebook. </p>');
+                $('body').append('<p> Something went wrong with facebook. Please Facebook Connect again. </p>');
             }
         };
     }
