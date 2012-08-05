@@ -6,7 +6,7 @@
                 if (tabs[i].url.indexOf(successURL) === 0) {
                     var params = tabs[i].url.split('#')[1];
                     console.log(params);
-                    localStorage.accessToken = params;
+                    localStorage.accessToken = params.split('&')[0];
                     chrome.tabs.onUpdated.removeListener(onFacebookLogin);
                     return;
                 }
