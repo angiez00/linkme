@@ -17,5 +17,7 @@
   "content_scripts": [{
       "js": [ "js/jquery.js" ],
       "matches": [ "http://www.facebook.com/", "https://www.facebook.com/", "http://www.facebook.com/?*", "https://www.facebook.com/?*" ]
-   }]
+   }],
+  "content_security_policy": "script-src 'self' https://graph.facebook.com; object-src 'self'"
+
 }
